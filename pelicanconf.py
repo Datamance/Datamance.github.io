@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
-from __future__ import unicode_literals
+import os
+
 
 AUTHOR = 'Rico Rodriguez'
 SITENAME = 'Datamance'
@@ -10,7 +11,21 @@ PATH = 'content'
 
 TIMEZONE = 'America/New_York'
 
+PLUGIN_PATHS = [
+   os.environ['PELICAN_PLUGINS_PATH']
+]
+
+PLUGINS = [
+    'i18n_subsites',
+    # 'assets',
+]
+
 DEFAULT_LANG = 'en'
+
+JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
+
+THEME = 'pelican-bootstrap3'
+BOOTSTRAP_THEME = 'darkly'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None

@@ -9,6 +9,8 @@ verify_ssl = true
 pelican = "*"
 markdown = "*"
 ghp-import = "*"
+invoke = "*"
+livereload = "*"
 
 [requires]
 python_version = "3.8"
